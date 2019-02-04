@@ -6,7 +6,7 @@ python:
     - '3.5'
     - '3.6'
     # travis ci doesn't have good py 3.7 support, yet.
-#    - '3.7'
+    - '3.7'
     - 'pypy'
     - 'pypy3'
 
@@ -17,6 +17,7 @@ env:
     - DJANGO="django>=1.11,<2"
     - DJANGO="django>=2.0,<2.1"
     - DJANGO="django>=2.1,<2.2"
+    - DJANGO="django>=1.11.17,<2.2"
 
 install:
     - pip install ${DJANGO}
@@ -52,5 +53,3 @@ matrix:
       env: DJANGO="django>=1.10,<1.11"
     - python: "3.7"
       env: DJANGO="django>=1.11,<2"
-    - python: "3.7"
-      env: DJANGO="django>=2.0,<2.1"
